@@ -32,7 +32,6 @@ RUN pip install scipy
 RUN pip install h5py
 RUN pip install jupyterlab
 RUN pip install sklearn
-RUN pip install seaborn
 
 USER $NB_USER
 
