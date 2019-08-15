@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
+FROM tensorflow/tensorflow:2.0.0a0-gpu-py3-jupyter
 
 # Set up user environment variables. #set UID and GID to the same as host
 ENV NB_USER=jovyan \
@@ -20,8 +20,7 @@ RUN groupadd -g $NB_GID jovyan
 #set as primary group
 RUN usermod -g jovyan jovyan
 
-# Change to jovyan user to install JupyterHub and any user space utils.
-#USER $NB_USER
+#Set home
 WORKDIR $HOME
 
 #Install packages
